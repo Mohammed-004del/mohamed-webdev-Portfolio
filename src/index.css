@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Portfolio Color Palette */
+    --primary: 349 70% 44%; /* #c02042 - Red/Pink */
+    --primary-dark: 347 77% 32%; /* #90132F */
+    --primary-darker: 351 54% 13%; /* #340F15 */
+    --background: 300 33% 1%; /* #020103 - Almost Black */
+    --teal: 183 16% 30%; /* #3F5859 */
+    --teal-light: 183 12% 61%; /* #90A7A8 */
+    
+    --foreground: 183 12% 95%;
+    --card: 351 54% 13%;
+    --card-foreground: 183 12% 95%;
+    --popover: 351 54% 13%;
+    --popover-foreground: 183 12% 95%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 183 16% 30%;
+    --secondary-foreground: 183 12% 95%;
+    --muted: 183 16% 20%;
+    --muted-foreground: 183 12% 61%;
+    --accent: 349 70% 44%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 183 16% 25%;
+    --input: 183 16% 25%;
+    --ring: 349 70% 44%;
+    --radius: 0.75rem;
+
+    /* Glass Effect Variables */
+    --glass-bg: hsla(351, 54%, 13%, 0.4);
+    --glass-border: hsla(183, 12%, 61%, 0.2);
+    --glass-shadow: 0 8px 32px 0 hsla(349, 70%, 44%, 0.15);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(349, 70%, 44%), hsl(347, 77%, 32%));
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsla(349, 70%, 44%, 0.3), transparent 70%);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+
+  /* Glass morphism utility */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  /* Glow effect */
+  .glow {
+    box-shadow: 0 0 20px hsla(349, 70%, 44%, 0.4),
+                0 0 40px hsla(349, 70%, 44%, 0.2);
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
