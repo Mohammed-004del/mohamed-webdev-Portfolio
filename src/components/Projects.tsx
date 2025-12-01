@@ -5,7 +5,7 @@ import project3 from "./images/project3.png";
 import project4 from "./images/project4.png";
 import project5 from "./images/project5.png";
 import project6 from "./images/project6.png";
-import project8 from "./images/project8.png";
+import project7 from "./images/project8.png";
 
 
 const Projects = () => {
@@ -62,7 +62,7 @@ const Projects = () => {
       title: "Dashboard",
       description: "A modern admin dashboard for monitoring business metrics and inventory. Built with HTML5, CSS3, and Font Awesome featuring collapsible sidebar navigation, statistics cards for users/products/posts/earnings, and detailed product tables. Fully responsive with smooth hover effects and elegant dark purple theme.",
       tags: ["HTML", "CSS"],
-      image: project8,
+      image: project7,
       live: "https://mohammed-004del.github.io/mohamed-webdev-Dashboard/",
       code: "https://github.com/Mohammed-004del/mohamed-webdev-Dashboard/blob/main/index.html",
     },
