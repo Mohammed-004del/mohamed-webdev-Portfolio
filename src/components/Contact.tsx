@@ -2,7 +2,7 @@ import { Mail, Github, Linkedin, Twitter, Facebook } from "lucide-react";
 
 const Contact = () => {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/Mohammed-004del/mohamed-webdev", label: "GitHub" },
+    { icon: Github, href: "https://github.com/Mohammed-004del/mohamed-webdev-Portfolio", label: "GitHub" },
     { icon: Linkedin, href: "https://www.linkedin.com/in/mohammed-mahmood-7327b0301/", label: "LinkedIn" },
     { icon: Facebook, href: "https://www.facebook.com/mohammed.front.end/", label: "Facebook" },
     { icon: Mail, href: "mailto:mohammedmahmoodhamed004@gmail.com", label: "Email" },
