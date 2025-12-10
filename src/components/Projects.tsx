@@ -6,6 +6,7 @@ import project4 from "./images/project4.png";
 import project5 from "./images/project5.png";
 import project6 from "./images/project6.png";
 import project7 from "./images/project7.png";
+import project8 from "./images/project8.png";
 
 
 const Projects = () => {
@@ -66,6 +67,14 @@ const Projects = () => {
       live: "https://mohammed-004del.github.io/mohamed-webdev-Dashboard/",
       code: "https://github.com/Mohammed-004del/mohamed-webdev-Dashboard/blob/main/index.html",
     },
+    {
+      title: "User Gallery",
+      description: "A dynamic user gallery application for exploring profile data. Built with HTML5, Tailwind CSS, and JavaScript (Async/Await) featuring asynchronous API integration, real-time loading indicators, and robust error handling. Fully responsive with a vibrant indigo-purple gradient theme, smooth card hover effects, and an interactive grid layout.",
+      tags: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS", "API", "Async/Await"],
+      image: project8,
+      live: "https://mohammed-004del.github.io/User-Gallery-project/",
+      code: "https://github.com/Mohammed-004del/User-Gallery-project/blob/main/src/index.html",
+    },
   ];
 
   return (
@@ -115,18 +124,18 @@ const Projects = () => {
 
               {/* Links */}
               <div className="flex gap-4">
-                  <a
-                    href={project.code}
-                    className="flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg transition-all duration-300 border border-primary/30">
-                    <Github size={18} />
-                    <span className="text-sm font-medium">Code</span>
-                  </a>
-                  <a
-                    href={project.live}
-                    className="flex items-center gap-2 px-4 py-2 bg-teal/10 hover:bg-teal/20 text-teal-light rounded-lg transition-all duration-300 border border-teal/30">
-                    <ExternalLink size={18} />
-                    <span className="text-sm font-medium">Live Demo</span>
-                  </a>
+                <a
+                  href={project.code}
+                  className="flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg transition-all duration-300 border border-primary/30">
+                  <Github size={18} />
+                  <span className="text-sm font-medium">Code</span>
+                </a>
+                <a
+                  href={project.live}
+                  className="flex items-center gap-2 px-4 py-2 bg-teal/10 hover:bg-teal/20 text-teal-light rounded-lg transition-all duration-300 border border-teal/30">
+                  <ExternalLink size={18} />
+                  <span className="text-sm font-medium">Live Demo</span>
+                </a>
               </div>
             </div>
           ))}
