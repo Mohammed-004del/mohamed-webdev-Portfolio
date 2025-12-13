@@ -8,7 +8,7 @@ Showcasing my journey as a front-end web developer through real-world projects, 
 This repo showcases my work as a **Front-End Web Developer**, where I build modern, responsive, and user-friendly web applications.
 
 ### 🔗 **Live Portfolio Demo:**  
-👉 [Click here to view the portfolio](https://fabulous-cendol-7718e8.netlify.app/)
+👉 [Click here to view the portfolio]()
 
 ---
 
@@ -50,7 +50,7 @@ I’m a passionate **Front-End Developer** who enjoys turning ideas into interac
 ---
 
 ## 🌐 Live Demos   
-- 🔗 [My Portfolio Website](https://fabulous-cendol-7718e8.netlify.app/) 
+- 🔗 [My Portfolio Website]() 
 - 🔗 [Adidas Landing Page Demo](https://mohammed-004del.github.io/mohamed-webdev-project-1/)
 - 🔗 [iPhone Landing Page Demo](https://mohammed-004del.github.io/mohamed-webdev-iphone-design/)
 - 🔗 [E-Learning Landing page Demo](https://mohammed-004del.github.io/mohamed-webdev-E-Learning-Landingpage/)
