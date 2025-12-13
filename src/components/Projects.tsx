@@ -80,7 +80,7 @@ const Projects = () => {
       title: "AL-Araby Oils E-commerce website",
       description: "A fully responsive e-commerce frontend web application for natural oils products. Built using React, TypeScript, and Tailwind CSS with a strong focus on clean UI, smooth UX, and scalable component-based architecture. The application includes product listings, cart functionality, modern navigation, and optimized performance for an intuitive shopping experience.",
       tags: ["React", "TypeScript", "Tailwind CSS", "Responsive Design", "E-commerce", "UI/UX"],
-      image: project8,
+      image: project9,
       live: "https://mohammed-004del.github.io/AL-Araby-Oils-E-commerce-Website/",
       code: "https://github.com/Mohammed-004del/AL-Araby-Oils-E-commerce-Website/blob/main/index.html",
     },
