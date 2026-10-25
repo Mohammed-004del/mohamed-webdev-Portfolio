@@ -74,7 +74,7 @@ a:hover>svg { transform: translate(2px, -2px); }
 .portrait-arch img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; filter: saturate(.58); transition: filter .7s, transform .9s; }
 .portrait-stage:hover img { filter: saturate(.95); transform: scale(1.025); }
 .portrait-outline { position: absolute; inset: 0 17px 62px 40px; border: 1px solid hsl(var(--accent)/.65); border-radius: 180px 180px 12px 12px; z-index: -1; }
-.portrait-orbit { position: absolute; width: 430px; height: 300px; max-width: 110%; top: 110px; left: -7px; border: 1px solid hsl(var(--primary)/.2); border-radius: 50%; transform: rotate(-29deg); z-index: -1; }
+.portrait-orbit { position: absolute; width: 85%; height: 240px; max-width: 85%; top: 120px; left: 0; border: 1px solid hsl(var(--primary)/.2); border-radius: 50%; transform: rotate(-29deg); z-index: -1; }
 .portrait-stamp { position: absolute; right: 0; top: 44px; width: 100px; height: 100px; border-radius: 50%; background: hsl(var(--primary)); color: hsl(var(--background)); display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 5px 0 hsl(var(--background)); transform: rotate(12deg); }
 .portrait-stamp svg { width: 31px; height: 31px; margin-bottom: 5px; animation: slow-turn 32s linear infinite; }
 .portrait-stamp span { font-size: 7px; letter-spacing: 1.5px; text-align: center; line-height: 1.5; }
@@ -206,7 +206,7 @@ h3 { font-size: 28px; font-weight: 500; letter-spacing: -.8px; margin: 0; }
   .portrait-stage { height: 465px; }
   .portrait-stamp { width: 85px; height: 85px; }
   .portrait-name strong { font-size: 30px; }
-  .portrait-orbit { width: 100%; }
+  .portrait-orbit { width: 85%; }
   .hero-actions { gap: 20px; }
   .button { padding: 16px 20px; gap: 16px; }
   .discipline-strip { font-size: 7px; letter-spacing: 1px; }
