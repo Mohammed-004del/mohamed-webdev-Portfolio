@@ -1,7 +1,32 @@
-import { ArrowUpRight, Github } from "lucide-react";
-import oilsImage from "./images/oils.webp";
-import spikyImage from "./images/spiky.webp";
-const Projects = () => <section id="projects" className="section-shell work-section"><div className="section-heading"><div><p className="eyebrow">01 / SELECTED WORK</p><h2>Built with purpose.<br/><span>Made to be used.</span></h2></div><p>Two projects. Different challenges.<br/>The same attention to the experience.</p></div>
- <div className="projects-grid"><article className="project project-spiky"><a className="project-visual" href="https://orven.orven-agency01.workers.dev/en/work/spiky/" target="_blank" rel="noopener noreferrer" aria-label="Explore Spiky case study"><div className="browser-bar"><span/><span/><span/><p>SPIKY / COACHING PLATFORM</p><ArrowUpRight size={16}/></div><img src={spikyImage} alt="Spiky Arabic coaching website with its training and nutrition offering" loading="lazy" width="1440" height="900"/><span className="visual-label">WEB APPLICATION</span></a><div className="project-meta"><span>01 — COACHING & FITNESS</span><span>ORVEN PROJECT</span></div><h3>Spiky<span>Coaching, connected.</span></h3><p>An Arabic-first coaching platform connecting a coach dashboard with a live client experience. Training plans, nutrition, water tracking, and downloadable plan books come together in one workflow.</p><div className="tags">{['JavaScript','HTML & CSS','Supabase','Vercel'].map(t=><span key={t}>{t}</span>)}</div><a className="project-link" href="https://orven.orven-agency01.workers.dev/en/work/spiky/" target="_blank" rel="noopener noreferrer">Explore the case study <ArrowUpRight size={18}/></a></article>
- <article className="project project-oils"><a className="project-visual" href="https://mohammed-004del.github.io/AL-Araby-Oils-E-commerce-Website/" target="_blank" rel="noopener noreferrer" aria-label="Visit AL-Araby Oils frontend demo"><div className="browser-bar"><span/><span/><span/><p>AL-ARABY / NATURAL OILS</p><ArrowUpRight size={16}/></div><img src={oilsImage} alt="AL-Araby Oils natural oils storefront homepage" loading="lazy" width="1440" height="900"/><span className="visual-label">E-COMMERCE FRONTEND</span></a><div className="project-meta"><span>02 — E-COMMERCE</span><span>PERSONAL PROJECT</span></div><h3>AL-Araby Oils<span>A natural shopping experience.</span></h3><p>A responsive natural oils storefront with product browsing, categories, product details, and a shopping cart. Checkout and authentication screens are frontend demonstrations; no backend or payment processing is connected.</p><div className="tags">{['React','TypeScript','Tailwind CSS','Vite'].map(t=><span key={t}>{t}</span>)}</div><div className="project-links"><a className="project-link" href="https://mohammed-004del.github.io/AL-Araby-Oils-E-commerce-Website/" target="_blank" rel="noopener noreferrer">View live demo <ArrowUpRight size={18}/></a><a className="source-link" href="https://github.com/Mohammed-004del/AL-Araby-Oils-E-commerce-Website" target="_blank" rel="noopener noreferrer"><Github size={16}/> Source</a></div></article></div></section>;
-export default Projects;
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { projects } from "@/data/projects";
+
+export default function Projects() {
+  return (
+    <section id="projects" className="section-shell work-section">
+      <div className="section-heading reveal">
+        <div><p className="eyebrow">01 / SELECTED WORK</p><h2>Different worlds.<br /><span>The same care.</span></h2></div>
+        <p>A closer look at the thinking,<br />the interfaces, and the details.</p>
+      </div>
+      <div className="projects-grid">
+        {projects.map(project => (
+          <article key={project.slug} className={`project project-${project.slug} reveal`}>
+            <Link className="project-visual" to={`/work/${project.slug}`} aria-label={`Read ${project.name} case study`}>
+              <div className="project-image-wrap"><img src={project.cover} alt={project.coverAlt} loading="lazy" width="1440" height="900" /></div>
+              <span className="visual-label">{project.category}</span><span className="project-open"><ArrowUpRight size={24} /></span>
+            </Link>
+            <div className="project-meta"><span>{project.number} / {project.category}</span><span>SELECTED PROJECT</span></div>
+            <h3>{project.name}<span>{project.line}</span></h3>
+            <p>{project.summary}</p>
+            <div className="tags">{project.stack.slice(0, 4).map(tag => <span key={tag}>{tag}</span>)}</div>
+            <div className="project-links">
+              <Link className="project-link" to={`/work/${project.slug}`}>Read case study <ArrowUpRight size={18} /></Link>
+              <a className="live-link" href={project.live} target="_blank" rel="noopener noreferrer">Visit live project <ArrowUpRight size={16} /></a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}

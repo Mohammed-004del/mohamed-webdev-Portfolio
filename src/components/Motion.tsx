@@ -1,0 +1,21 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+export default function Motion() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    const elements = document.querySelectorAll(".reveal");
+    elements.forEach(element => { element.classList.add("will-reveal"); observer.observe(element); });
+    return () => { observer.disconnect(); elements.forEach(element => element.classList.remove("will-reveal")); };
+  }, [pathname]);
+  return null;
+}
