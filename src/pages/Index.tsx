@@ -4,35 +4,5 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import techBackground from "@/assets/tech-background.jpg";
-
-const Index = () => {
-  return (
-    <div 
-      className="min-h-screen relative"
-      style={{
-        backgroundImage: `url(${techBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-      }}
-    >
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
-      
-      {/* Content */}
-      <div className="relative z-10">
-        <Navbar />
-        <main>
-          <Hero />
-          <Skills />
-          <Projects />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
-    </div>
-  );
-};
-
+const Index = () => <><a className="skip-link" href="#main">Skip to content</a><Navbar/><main id="main"><Hero/><div className="discipline-strip" aria-label="Focus areas"><span>RESPONSIVE WEBSITES</span><span aria-hidden="true">✳</span><span>THOUGHTFUL INTERFACES</span><span aria-hidden="true">✳</span><span>WEB APPLICATIONS</span><span aria-hidden="true">✳</span><span>FRONTEND DEVELOPMENT</span></div><Projects/><Skills/><Contact/></main><Footer/></>;
 export default Index;

@@ -1,69 +1,8 @@
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
-
+import { Menu, X, ArrowUpRight } from "lucide-react";
+import { useEffect, useState } from "react";
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
-  ];
-
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#home" className="text-2xl font-bold bg-gradient-to-r from-primary to-teal-light bg-clip-text text-transparent">
-            Mohammed
-          </a>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 relative group"
-              >
-                {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
-              </a>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground hover:text-primary transition-colors"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden mt-4 pb-4 animate-fade-in">
-            <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-foreground hover:text-primary transition-colors duration-300 py-2"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
-  );
+ const [isOpen,setIsOpen]=useState(false);
+ useEffect(()=>{const close=(event:KeyboardEvent)=>{if(event.key==='Escape')setIsOpen(false)};window.addEventListener('keydown',close);return()=>window.removeEventListener('keydown',close)},[]);
+ return <header className="site-header"><nav className="nav-shell" aria-label="Main navigation"><a className="wordmark" href="#home" aria-label="Mohammed Mahmood home">m<span>.</span></a><div className="desktop-nav"><a href="#projects">Selected work</a><a href="#about">About</a><a href="#skills">Toolkit</a></div><a className="nav-contact" href="#contact">Let’s talk <ArrowUpRight size={16}/></a><button className="menu-toggle" aria-label={isOpen?'Close navigation':'Open navigation'} aria-expanded={isOpen} aria-controls="mobile-nav" onClick={()=>setIsOpen(!isOpen)}>{isOpen?<X/>:<Menu/>}</button>{isOpen&&<div id="mobile-nav" className="mobile-nav">{[['Selected work','#projects'],['About','#about'],['Toolkit','#skills'],['Contact','#contact']].map(([name,href])=><a key={href} href={href} onClick={()=>setIsOpen(false)}>{name}</a>)}</div>}</nav></header>
 };
-
 export default Navbar;
