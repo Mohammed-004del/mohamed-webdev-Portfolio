@@ -4,27 +4,27 @@
 
 @layer base {
   :root {
-    --background: 40 33% 96%;
-    --foreground: 222 43% 17%;
-    --primary: 224 48% 34%;
-    --primary-foreground: 40 33% 96%;
-    --primary-dark: 224 46% 25%;
-    --teal-light: 20 39% 43%;
-    --card: 39 29% 92%;
-    --card-foreground: 222 43% 17%;
-    --popover: 40 33% 96%;
-    --popover-foreground: 222 43% 17%;
-    --secondary: 39 20% 89%;
-    --secondary-foreground: 222 43% 17%;
-    --muted: 39 20% 89%;
-    --muted-foreground: 220 10% 41%;
-    --accent: 20 39% 43%;
-    --accent-foreground: 0 0% 100%;
+    --background: 225 20% 7%;
+    --foreground: 38 24% 91%;
+    --primary: 34 38% 72%;
+    --primary-foreground: 225 20% 9%;
+    --primary-dark: 32 30% 57%;
+    --teal-light: 34 38% 72%;
+    --card: 225 15% 11%;
+    --card-foreground: 38 24% 91%;
+    --popover: 225 15% 11%;
+    --popover-foreground: 38 24% 91%;
+    --secondary: 225 13% 15%;
+    --secondary-foreground: 38 24% 91%;
+    --muted: 225 13% 15%;
+    --muted-foreground: 224 8% 65%;
+    --accent: 30 36% 67%;
+    --accent-foreground: 225 20% 9%;
     --destructive: 0 70% 45%;
     --destructive-foreground: 0 0% 100%;
-    --border: 34 17% 80%;
-    --input: 34 17% 80%;
-    --ring: 224 48% 34%;
+    --border: 225 12% 23%;
+    --input: 225 12% 23%;
+    --ring: 34 38% 72%;
     --radius: .5rem;
   }
   * { @apply border-border; box-sizing: border-box; }
@@ -70,7 +70,7 @@ a:hover>svg { transform: translate(2px, -2px); }
 .hero-tech p { display: flex; align-items: center; gap: 13px; font-size: 11px; margin: 11px 0 0; }
 .hero-tech i { width: 3px; height: 3px; border-radius: 50%; background: hsl(var(--accent)); }
 .portrait-stage { position: relative; width: 100%; max-width: 435px; height: 515px; justify-self: end; isolation: isolate; }
-.portrait-arch { position: absolute; inset: 20px 37px 45px 23px; border-radius: 180px 180px 12px 12px; overflow: hidden; background: hsl(33 21% 81%); }
+.portrait-arch { position: absolute; inset: 20px 37px 45px 23px; border-radius: 180px 180px 12px 12px; overflow: hidden; background: hsl(225 12% 16%); }
 .portrait-arch img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; filter: saturate(.58); transition: filter .7s, transform .9s; }
 .portrait-stage:hover img { filter: saturate(.95); transform: scale(1.025); }
 .portrait-outline { position: absolute; inset: 0 17px 62px 40px; border: 1px solid hsl(var(--accent)/.65); border-radius: 180px 180px 12px 12px; z-index: -1; }
@@ -94,8 +94,8 @@ h3 { font-size: 28px; font-weight: 500; letter-spacing: -.8px; margin: 0; }
 .section-heading>p { font-size: 12px; line-height: 1.9; color: hsl(var(--muted-foreground)); margin-bottom: 3px; }
 .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: start; }
 .project:nth-child(2) { margin-top: 100px; }
-.project-visual { display: block; position: relative; padding: 42px 26px 55px; background: hsl(224 24% 87%); overflow: hidden; border-radius: 3px; }
-.project-al-araby-oils .project-visual { background: hsl(32 28% 85%); }
+.project-visual { display: block; position: relative; padding: 42px 26px 55px; background: hsl(224 19% 14%); overflow: hidden; border-radius: 3px; }
+.project-al-araby-oils .project-visual { background: hsl(28 13% 14%); }
 .project-image-wrap { border-radius: 5px; overflow: hidden; box-shadow: 0 18px 28px hsl(222 43% 17%/.12); transform: rotate(-3deg); transition: transform .65s cubic-bezier(.2,.7,.2,1); }
 .project:nth-child(2) .project-image-wrap { transform: rotate(3deg); }
 .project-visual:hover .project-image-wrap { transform: rotate(0) translateY(-6px); }
@@ -127,7 +127,7 @@ h3 { font-size: 28px; font-weight: 500; letter-spacing: -.8px; margin: 0; }
 .toolkit-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 30px; }
 .toolkit-list>span { display: flex; align-items: center; gap: 16px; border-bottom: 1px solid hsl(var(--border)); padding: 16px 0; font-size: 12px; }
 .toolkit-list small { font-size: 8px; color: hsl(var(--accent)); }
-.contact-section { padding: 56px 50px; background: hsl(var(--foreground)); color: hsl(var(--background)); border-radius: 4px; margin-bottom: 45px; position: relative; overflow: hidden; }
+.contact-section { padding: 56px 50px; background: hsl(225 18% 11%); color: hsl(var(--foreground)); border-radius: 4px; margin-bottom: 45px; position: relative; overflow: hidden; }
 .contact-section::before { content: ''; position: absolute; width: 350px; height: 350px; border: 1px solid hsl(40 33% 96%/.08); border-radius: 50%; top: -150px; right: -50px; pointer-events: none; }
 .contact-section .eyebrow { color: hsl(30 43% 72%); }
 .contact-heading { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
@@ -153,8 +153,8 @@ h3 { font-size: 28px; font-weight: 500; letter-spacing: -.8px; margin: 0; }
 .case-intro-row { display: flex; justify-content: space-between; align-items: center; gap: 45px; margin-block: 32px 45px; }
 .case-intro-row>p { max-width: 650px; color: hsl(var(--muted-foreground)); font-size: 15px; line-height: 1.9; margin: 0; }
 .case-intro-row .button { flex-shrink: 0; }
-.case-cover { margin: 0; background: hsl(224 24% 87%); padding: 50px 60px 25px; border-radius: 4px; }
-.case-al-araby-oils .case-cover { background: hsl(32 28% 85%); }
+.case-cover { margin: 0; background: hsl(224 19% 14%); padding: 50px 60px 25px; border-radius: 4px; }
+.case-al-araby-oils .case-cover { background: hsl(28 13% 14%); }
 .case-cover img { width: 100%; aspect-ratio: 1.8; object-fit: cover; object-position: top; border-radius: 4px; box-shadow: 0 15px 30px hsl(var(--foreground)/.1); }
 .case-cover figcaption { font-size: 8px; letter-spacing: 1.7px; margin-top: 25px; }
 .case-facts { display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 40px; padding-block: 36px; border-bottom: 1px solid hsl(var(--border)); }
@@ -177,7 +177,7 @@ h3 { font-size: 28px; font-weight: 500; letter-spacing: -.8px; margin: 0; }
 .case-gallery-item { margin: 0 0 45px; }
 .gallery-image { background: hsl(var(--card)); padding: 23px; border-radius: 4px; }
 .gallery-image img { width: 100%; border-radius: 3px; box-shadow: 0 5px 25px hsl(var(--foreground)/.06); }
-.case-spiky .case-gallery-item:nth-of-type(2) .gallery-image { display: flex; justify-content: center; background: hsl(224 24% 87%); padding: 35px; }
+.case-spiky .case-gallery-item:nth-of-type(2) .gallery-image { display: flex; justify-content: center; background: hsl(224 19% 14%); padding: 35px; }
 .case-spiky .case-gallery-item:nth-of-type(2) img { width: min(100%,320px); }
 .case-gallery-item figcaption { padding-top: 24px; }
 .case-gallery-item figcaption .eyebrow { display: block; margin-bottom: 12px; font-size: 8px; }
@@ -299,6 +299,43 @@ h3 { font-size: 28px; font-weight: 500; letter-spacing: -.8px; margin: 0; }
   .next-project h2 { font-size: 31px; }
   .next-project>svg { width: 29px; }
 }
+/* Shared motion language: restrained easing, consistent interaction timing. */
+:root { color-scheme: dark; --ease-out: cubic-bezier(.22, 1, .36, 1); --motion-fast: 280ms; --motion-slow: 700ms; }
+body { background-image: radial-gradient(ellipse at 84% 8%, hsl(32 35% 40% / .055), transparent 48%); }
+a, button { -webkit-tap-highlight-color: transparent; }
+a, button, .tags>span, .toolkit-list>span {
+  transition: color var(--motion-fast) ease, background-color var(--motion-fast) ease, border-color var(--motion-fast) ease, box-shadow 400ms ease, transform 500ms var(--ease-out);
+}
+a:where(.text-link,.live-link,.source-link,.back-link,.email-link):hover { color: hsl(var(--primary)); }
+.button-primary:hover { background: hsl(34 38% 80%); box-shadow: 0 8px 30px hsl(30 35% 50% / .13); }
+.nav-contact:hover, .portrait-more:hover { background: hsl(var(--primary) / .08); border-color: hsl(var(--primary) / .65); }
+.desktop-nav a:hover, .mobile-nav a:hover { color: hsl(var(--primary)); }
+.menu-toggle:hover { color: hsl(var(--primary)); background: hsl(var(--primary) / .06); border-radius: 50%; }
+.mobile-nav { visibility: hidden; opacity: 0; transform: translateY(-8px); pointer-events: none; transition: opacity 280ms ease, transform 350ms var(--ease-out), visibility 0s 350ms; box-shadow: 0 22px 45px hsl(0 0% 0% / .35); }
+.mobile-nav.is-open { visibility: visible; opacity: 1; transform: translateY(0); pointer-events: auto; transition-delay: 0s; }
+@media (min-width: 701px) { .mobile-nav { display: none; } }
+.portrait-arch { box-shadow: 0 20px 65px hsl(0 0% 0% / .22); }
+.portrait-stamp { background: hsl(225 17% 15%); color: hsl(var(--primary)); border: 1px solid hsl(var(--primary) / .4); }
+.portrait-outline { border-color: hsl(var(--accent) / .45); }
+.project-visual, .case-cover, .gallery-image { border: 1px solid hsl(var(--border) / .7); }
+.project-visual { transition: border-color 450ms ease, background-color 450ms ease, box-shadow 600ms ease; }
+.project-visual:hover { border-color: hsl(var(--primary) / .45); box-shadow: 0 18px 48px hsl(0 0% 0% / .19); }
+.project-open { border: 1px solid hsl(var(--border)); transition: background-color 350ms ease, color 350ms ease, transform 600ms var(--ease-out); }
+.project-visual:hover .project-open { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); transform: rotate(45deg); }
+.project-image-wrap { box-shadow: 0 18px 30px hsl(0 0% 0% / .35); }
+.tags>span:hover { color: hsl(var(--primary)); border-color: hsl(var(--primary) / .4); background: hsl(var(--primary) / .04); }
+.toolkit-list>span:hover { color: hsl(var(--primary)); border-color: hsl(var(--primary) / .4); transform: translateX(4px); }
+.contact-section { border: 1px solid hsl(var(--primary) / .18); box-shadow: inset 0 1px 0 hsl(var(--primary) / .05); }
+.social-links a { display: inline-flex; padding: 7px; border-radius: 50%; }
+.social-links a:hover { background: hsl(var(--primary) / .1); color: hsl(var(--primary)); transform: translateY(-3px); }
+.page-scene { animation: page-arrive 600ms var(--ease-out) both; }
+.case-monogram { color: hsl(var(--primary) / .14); }
+.case-gallery-item img { transition: box-shadow 600ms ease; }
+.case-gallery-item:hover img { box-shadow: 0 12px 35px hsl(0 0% 0% / .3); }
+.next-project:hover { color: hsl(var(--primary)); border-color: hsl(var(--primary) / .45); }
+html { scrollbar-color: hsl(225 10% 32%) hsl(var(--background)); }
+@keyframes page-arrive { from { opacity: 0; } to { opacity: 1; } }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
